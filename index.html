@@ -953,105 +953,96 @@ footer{background:var(--forest);padding:2rem 5vw;display:flex;justify-content:sp
         </script>
       </div>
 
-      <!-- 우측: 상담 신청 폼 -->
+      <!-- 우측: 상담 신청 -->
       <div>
-        <!-- 폼 제목 -->
-        <div style="text-align:center;margin-bottom:1.5rem">
+
+        <!-- 카카오톡 바로 상담 버튼 -->
+        <a href="https://pf.kakao.com/_EdwuG/chat" target="_blank"
+          style="display:flex;align-items:center;justify-content:center;gap:0.8rem;padding:1.2rem;background:#FEE500;color:#0c0c0c;text-decoration:none;font-family:var(--kr);font-size:1rem;font-weight:800;border-radius:4px;box-shadow:0 4px 12px rgba(254,229,0,0.35);margin-bottom:0.5rem">
+          <span style="font-size:1.3rem">💬</span>
+          <span>카카오톡 1:1 상담하기</span>
+        </a>
+        <div style="text-align:center;font-size:0.75rem;color:var(--muted);margin-bottom:1.5rem">클릭 즉시 카카오 채팅으로 연결됩니다</div>
+
+        <!-- 구분선 -->
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+          <div style="flex:1;height:1px;background:var(--rule)"></div>
+          <div style="font-size:0.75rem;color:var(--muted);white-space:nowrap">또는 상담 신청서 작성</div>
+          <div style="flex:1;height:1px;background:var(--rule)"></div>
+        </div>
+
+        <!-- 상담 신청 폼 -->
+        <div style="text-align:center;margin-bottom:1.2rem">
           <div style="font-family:var(--kr);font-size:1.1rem;font-weight:700;color:var(--forest);margin-bottom:0.3rem">상담자 정보</div>
           <div style="font-size:0.75rem;color:var(--muted)">* 별표 표시는 필수 입력 항목입니다</div>
         </div>
 
-        <!-- 폼 -->
         <div id="consultForm">
-          <!-- 성함 -->
           <input type="text" id="cf_name" placeholder="*성함 (필수입력사항)"
             style="width:100%;padding:0.9rem 1rem;border:1px solid #ddd;margin-bottom:0.8rem;font-size:0.9rem;font-family:var(--sans);outline:none;border-radius:4px;color:var(--ink)"
             onfocus="this.style.borderColor='var(--forest)'" onblur="this.style.borderColor='#ddd'">
 
-          <!-- 연락처 -->
           <input type="tel" id="cf_phone" placeholder="*휴대폰번호 (필수입력사항) 010-1234-5678"
             style="width:100%;padding:0.9rem 1rem;border:1px solid #ddd;margin-bottom:0.8rem;font-size:0.9rem;font-family:var(--sans);outline:none;border-radius:4px;color:var(--ink)"
             onfocus="this.style.borderColor='var(--forest)'" onblur="this.style.borderColor='#ddd'">
 
-          <!-- 추천인 -->
-          <input type="text" id="cf_ref" placeholder="*추천인(소개자)(필수입력사항, 없을 경우 없음이라고 적어주세요)"
+          <input type="text" id="cf_ref" placeholder="추천인(소개자) - 없을 경우 없음"
             style="width:100%;padding:0.9rem 1rem;border:1px solid #ddd;margin-bottom:1.2rem;font-size:0.9rem;font-family:var(--sans);outline:none;border-radius:4px;color:var(--ink)"
             onfocus="this.style.borderColor='var(--forest)'" onblur="this.style.borderColor='#ddd'">
 
-          <!-- 관심 분야 -->
           <div style="margin-bottom:1rem">
             <div style="font-size:0.85rem;color:var(--forest);font-weight:600;margin-bottom:0.7rem">관심 서비스 (복수선택 가능)</div>
             <div style="display:flex;flex-direction:column;gap:0.5rem">
-              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer">
-                <input type="checkbox" value="연금저축 설계·이전" style="width:15px;height:15px;accent-color:var(--forest)"> 연금저축 설계·이전
-              </label>
-              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer">
-                <input type="checkbox" value="IRP·퇴직연금" style="width:15px;height:15px;accent-color:var(--forest)"> IRP·퇴직연금
-              </label>
-              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer">
-                <input type="checkbox" value="ISA 절세" style="width:15px;height:15px;accent-color:var(--forest)"> ISA 절세
-              </label>
-              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer">
-                <input type="checkbox" value="노란우산공제" style="width:15px;height:15px;accent-color:var(--forest)"> 노란우산공제
-              </label>
-              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer">
-                <input type="checkbox" value="개인투자조합" style="width:15px;height:15px;accent-color:var(--forest)"> 개인투자조합
-              </label>
-              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer">
-                <input type="checkbox" value="상속·증여 절세" style="width:15px;height:15px;accent-color:var(--forest)"> 상속·증여 절세
-              </label>
-              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer">
-                <input type="checkbox" value="달러 연금" style="width:15px;height:15px;accent-color:var(--forest)"> 달러 연금
-              </label>
-              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer">
-                <input type="checkbox" value="보험 점검·자산승계" style="width:15px;height:15px;accent-color:var(--forest)"> 보험 점검·자산승계
-              </label>
+              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer"><input type="checkbox" value="연금저축 설계·이전" style="width:15px;height:15px;accent-color:var(--forest)"> 연금저축 설계·이전 (보험→증권)</label>
+              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer"><input type="checkbox" value="보험 해지 여부 상담" style="width:15px;height:15px;accent-color:var(--forest)"> 보험 깨야 할지 상담</label>
+              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer"><input type="checkbox" value="IRP·퇴직연금" style="width:15px;height:15px;accent-color:var(--forest)"> IRP·퇴직연금</label>
+              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer"><input type="checkbox" value="ISA 절세" style="width:15px;height:15px;accent-color:var(--forest)"> ISA 절세</label>
+              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer"><input type="checkbox" value="해외 자산 이전" style="width:15px;height:15px;accent-color:var(--forest)"> 해외 자산 이전</label>
+              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer"><input type="checkbox" value="노란우산공제" style="width:15px;height:15px;accent-color:var(--forest)"> 노란우산공제</label>
+              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer"><input type="checkbox" value="개인투자조합" style="width:15px;height:15px;accent-color:var(--forest)"> 개인투자조합</label>
+              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer"><input type="checkbox" value="상속·증여 절세" style="width:15px;height:15px;accent-color:var(--forest)"> 상속·증여 절세</label>
+              <label style="display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--ink);cursor:pointer"><input type="checkbox" value="달러 연금" style="width:15px;height:15px;accent-color:var(--forest)"> 달러 연금</label>
             </div>
           </div>
 
-          <!-- 기타 문의 -->
-          <textarea id="cf_msg" placeholder="기타 문의사항"
+          <textarea id="cf_msg" placeholder="문의 내용을 자유롭게 적어주세요&#10;예) 연금저축 보험에서 증권으로 이전하고 싶어요"
             style="width:100%;padding:0.9rem 1rem;border:1px solid #ddd;margin-bottom:1rem;font-size:0.9rem;font-family:var(--sans);outline:none;border-radius:4px;resize:vertical;min-height:90px;color:var(--ink)"
             onfocus="this.style.borderColor='var(--forest)'" onblur="this.style.borderColor='#ddd'"></textarea>
 
-          <!-- 개인정보 동의 -->
           <label style="display:flex;align-items:flex-start;gap:0.6rem;font-size:0.78rem;color:var(--muted);cursor:pointer;margin-bottom:1rem">
             <input type="checkbox" id="cf_agree" style="width:15px;height:15px;margin-top:2px;accent-color:var(--forest);flex-shrink:0">
             <span>개인정보취급방침을 읽었으며 이에 동의합니다.</span>
           </label>
 
-          <!-- 문의하기 버튼 -->
           <button onclick="submitConsult()"
-            style="width:100%;padding:1.1rem;background:var(--forest);color:#ffffff;font-size:1rem;font-weight:700;font-family:var(--kr);letter-spacing:0.1em;border:none;cursor:pointer;border-radius:4px;transition:background .25s">
+            style="width:100%;padding:1.1rem;background:var(--forest);color:#ffffff;font-size:1rem;font-weight:700;font-family:var(--kr);letter-spacing:0.1em;border:none;cursor:pointer;border-radius:4px;margin-bottom:0.5rem">
             문의하기
           </button>
-          <p style="font-size:0.72rem;color:var(--muted);text-align:center;margin-top:0.5rem">
-            * 제출 후 구글 폼으로 연결되어 대표님께 즉시 전달됩니다
-          </p>
+          <p style="font-size:0.72rem;color:var(--muted);text-align:center">* 제출 시 이메일로 즉시 전달됩니다</p>
         </div>
 
         <!-- 전송 완료 메시지 -->
         <div id="consultSuccess" style="display:none;text-align:center;padding:3rem 1rem">
           <div style="font-size:3rem;margin-bottom:1rem">✅</div>
           <div style="font-family:var(--kr);font-size:1.2rem;font-weight:700;color:var(--forest);margin-bottom:0.8rem">전송되었습니다!</div>
-          <p style="font-size:0.88rem;color:var(--muted);line-height:1.85">
-            24시간 내에 010-4972-9552로 연락드립니다.<br>감사합니다 😊
-          </p>
-          <div style="display:flex;flex-direction:column;gap:0.8rem;margin-top:1.5rem">
-            <a href="https://open.kakao.com/o/s9yVTUCi" target="_blank"
-              style="display:flex;align-items:center;justify-content:center;gap:0.6rem;padding:0.9rem;background:#FEE500;color:#0c0c0c;text-decoration:none;font-weight:700;font-size:0.9rem;border-radius:4px">
-              💬 카카오톡으로 바로 상담하기
-            </a>
-            <a href="tel:010-4972-9552"
-              style="display:flex;align-items:center;justify-content:center;gap:0.6rem;padding:0.9rem;background:var(--gold);color:var(--ink);text-decoration:none;font-weight:700;font-size:0.9rem;border-radius:4px">
-              📞 010-4972-9552 통화하기
-            </a>
-          </div>
+          <p style="font-size:0.88rem;color:var(--muted);line-height:1.85">24시간 내에 010-4972-9552로 연락드립니다.<br>잠시 후 구글 상담 신청서가 열립니다 😊</p>
+          <a href="https://forms.gle/uTQWmmoYHespBr6z5" target="_blank"
+            style="display:flex;align-items:center;justify-content:center;gap:0.6rem;margin-top:1rem;padding:0.9rem;background:var(--forest);color:#ffffff;text-decoration:none;font-weight:700;font-size:0.9rem;border-radius:4px;margin-bottom:0.8rem">
+            📋 구글 상담 신청서 작성하기
+          </a>
+          <a href="https://pf.kakao.com/_EdwuG/chat" target="_blank"
+            style="display:flex;align-items:center;justify-content:center;gap:0.6rem;margin-top:1.5rem;padding:0.9rem;background:#FEE500;color:#0c0c0c;text-decoration:none;font-weight:700;font-size:0.9rem;border-radius:4px">
+            💬 카카오톡 1:1 상담하기
+          </a>
+          <a href="tel:010-4972-9552"
+            style="display:flex;align-items:center;justify-content:center;gap:0.6rem;margin-top:0.8rem;padding:0.9rem;background:var(--gold);color:var(--ink);text-decoration:none;font-weight:700;font-size:0.9rem;border-radius:4px">
+            📞 010-4972-9552 통화하기
+          </a>
         </div>
-      </div>
-    </div>
 
-    <!-- 하단: 사무실 주소 + 소속 가로 한 줄 -->
+      </div>
+
+      <!-- 하단: 사무실 주소 + 소속 가로 한 줄 -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem;padding-top:2rem;border-top:1px solid var(--rule)" id="addressGrid">
       <div style="display:flex;align-items:flex-start;gap:1rem">
         <div style="width:36px;height:36px;background:var(--forest);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--gold);font-size:0.88rem">📍</div>
@@ -1199,7 +1190,7 @@ function submitForm() {
   document.getElementById('cform').style.display = 'none';
   document.getElementById('formSuccess').style.display = 'block';
   setTimeout(function(){
-    window.open('https://open.kakao.com/o/s9yVTUCi', '_blank');
+    window.open('https://pf.kakao.com/_EdwuG/chat', '_blank');
   }, 800);
 }
 
@@ -1293,6 +1284,9 @@ function submitConsult(){
     .then(function(){
       document.getElementById('consultForm').style.display = 'none';
       document.getElementById('consultSuccess').style.display = 'block';
+      setTimeout(function(){
+        window.open('https://forms.gle/uTQWmmoYHespBr6z5', '_blank');
+      }, 1500);
     }, function(error){
       alert('전송 실패했습니다. 카카오톡으로 문의해 주세요.');
       btn.textContent = '문의하기';
