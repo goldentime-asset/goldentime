@@ -1014,18 +1014,25 @@ footer{background:var(--forest);padding:2rem 5vw;display:flex;justify-content:sp
             <span>개인정보취급방침을 읽었으며 이에 동의합니다.</span>
           </label>
 
+          <!-- 구글폼 먼저! -->
+          <a href="https://forms.gle/uTQWmmoYHespBr6z5" target="_blank"
+            style="display:flex;align-items:center;justify-content:center;gap:0.6rem;width:100%;padding:1.1rem;background:#4285f4;color:#ffffff;text-decoration:none;font-family:var(--kr);font-size:1rem;font-weight:700;border-radius:4px;margin-bottom:0.8rem">
+            <span style="font-size:1.2rem">📋</span>
+            <span>구글 상담 신청서 작성하기</span>
+          </a>
+
+          <!-- 구분선 -->
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.8rem">
+            <div style="flex:1;height:1px;background:var(--rule)"></div>
+            <div style="font-size:0.72rem;color:var(--muted);white-space:nowrap">또는 아래 정보 입력 후 전송</div>
+            <div style="flex:1;height:1px;background:var(--rule)"></div>
+          </div>
+
           <button onclick="submitConsult()"
             style="width:100%;padding:1.1rem;background:var(--forest);color:#ffffff;font-size:1rem;font-weight:700;font-family:var(--kr);letter-spacing:0.1em;border:none;cursor:pointer;border-radius:4px;margin-bottom:0.5rem">
             문의하기
           </button>
           <p style="font-size:0.72rem;color:var(--muted);text-align:center">* 제출 시 이메일로 즉시 전달됩니다</p>
-
-          <!-- 구글폼 직접 연결 버튼 -->
-          <a href="https://forms.gle/uTQWmmoYHespBr6z5" target="_blank"
-            style="display:flex;align-items:center;justify-content:center;gap:0.6rem;width:100%;padding:1rem;background:#4285f4;color:#ffffff;text-decoration:none;font-family:var(--kr);font-size:0.95rem;font-weight:700;border-radius:4px;margin-top:0.8rem">
-            <span style="font-size:1.1rem">📋</span>
-            <span>구글 상담 신청서 작성하기</span>
-          </a>
         </div>
 
         <!-- 전송 완료 메시지 -->
